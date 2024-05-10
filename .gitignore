@@ -1,18 +1,25 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+#Enregistrement des valeurs tapees par l'utilisateur
+import math
 
-# Other files and folders
-.settings/
+print("L'equation du second degree est : ax2+bx+c=0 ")
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+a = input("Enter a :")
+a = float(a)
+b = input("Enter b :")
+b = float(b)
+c = input("Enter c :")
+c = float(c)
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+#Calcule de Delta et affichage
+
+delta = b*b-4*a*c
+print(math.sqrt(delta))
+if (delta < 0.0):
+    print("No solutions")
+elif (delta == 0.0 ):
+    print ("Double solution :")
+    print(-b/(2*a))
+else :
+    print("Two solutions :")
+    print((-b - math.sqrt(delta))/(2*a))
+    print((-b + math.sqrt(delta))/(2*a))
